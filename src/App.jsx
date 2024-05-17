@@ -4,7 +4,9 @@ import { nanoid } from "nanoid";
 import "./index.css";
 import ContactForm from "./components/ContactForm/ContactForm";
 import SearchBox from "./components/SearchBox/SearchBox";
-import Contact from "./components/Contact/Contact";
+import ContactList from "./components/ContactList/ContactList";
+
+
 
 const initialValue = [
   { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
@@ -43,7 +45,7 @@ const App = () => {
       <h1>Phonebook</h1>
       <ContactForm handleUserForm={handleAddUser} />
       <SearchBox value={filterUsers} onFilterUsers={setFilterUsers} />
-      <Contact users={filtered} onRemoveUser={handleRemoveUser} />
+      <ContactList users={filtered} onRemoveUser={handleRemoveUser} />
     </div>
   );
 }

@@ -1,30 +1,15 @@
-.userData {
+.nameList {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-wrap: wrap;
+  
 }
-.userName {
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-.userNumber {
+.nameItem {
+  margin: 0;
+  padding: 15px;
   display: flex;
   align-items: center;
-  padding: 0;
-}
-p {
-  margin: 5px;
-}
-.userIconName {
-  padding-right: 10px;
-  color: #111;
-}
-.userIconNumber {
-  padding-right: 10px;
-  color: #111;
-}
-
-button {
-  background-color: rgb(98, 159, 234);
+  justify-content: center;
+  justify-content: space-between;
+  width: 250px;
+  border: 5px;
 }

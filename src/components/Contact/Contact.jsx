@@ -1,16 +1,26 @@
-import ContactList from "../ContactList/ContactList"
+
 import css from "./Contact.module.css"
-
-const Contact = ({ users, onRemoveUser }) => {
+import { FaUser, FaPhone } from "react-icons/fa"
+const Contact = ({ data, onRemoveUser }) => {
   return (
-    <ul className={css.nameList}>
-      {users.map((user) => (
-        <li className={css.nameItem} key={user.id}>
-          <ContactList data={user} onRemoveUser={onRemoveUser} />
-        </li>
-      ))}
-    </ul>
-  );
-};
+    <>
+      <div className={css.userData}>
+        <div className={css.userName}>
+          <FaUser className={css.userIconName} />
+          <p>{data.name}</p>
+        </div>
+        <div className={css.userNumber}>
+          <FaPhone className={css.userIconNumber} />
+          <p>{data.number}</p>
+        </div>
+      </div>
+      <button type="button" onClick={() => onRemoveUser(data.id)}>
+        REMOVE
+      </button>
 
-export default Contact;
+    </>
+  )
+}
+
+export default Contact
+
